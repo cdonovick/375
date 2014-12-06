@@ -1,4 +1,4 @@
-standard.h shall include the following:
+functions.h shall include the following:
 
     All function prototypes for the functions in functions.cpp
     
