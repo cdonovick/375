@@ -17,7 +17,7 @@ void test(size_t N, size_t M) {
     std::vector<std::string> S;
     S.reserve(N);
     for (size_t i = 0; i < N; ++i) { 
-        S.push_back(rand_str(M));
+        S.push_back(rand_str(M, 122124561));
     }
     
     auto S1 = S;
@@ -27,23 +27,22 @@ void test(size_t N, size_t M) {
     auto S5 = S;
     auto S6 = S;
 
-    std::cout << '1' << std::endl;
+    std::cout << '1';
     auto r1 = AllPairsLCS_b(S1);  //base AllPairsLCS
-    std::cout << '2' << std::endl;
-    auto r2 = AllPairsLCS_p(S2);  //with pruning
-    std::cout << '3' << std::endl;
-    auto r3 = AllPairsLCS_s(S3);  //with sorting
-    std::cout << '4' << std::endl;
-    auto r4 = AllPairsLCS_pab(S4); //with preallocation
-    std::cout << '5' << std::endl;
-    auto r5 = AllPairsLCS_pap(S5); //with preallocation and pruning
-    std::cout << '6' << std::endl;
-    auto r6 = AllPairsLCS_pas(S6); //with preallocation and sorting
-
-    assert(0               != std::get<2>(r1));
-    assert(std::get<2>(r1) == std::get<2>(r2));
-    assert(std::get<2>(r2) == std::get<2>(r3));
-    assert(std::get<2>(r3) == std::get<2>(r4));
-    assert(std::get<2>(r4) == std::get<2>(r5));
-    assert(std::get<2>(r5) == std::get<2>(r6));
+    std::cout << ' ' << std::get<2>(r1) << std::endl;
+    std::cout << '2';
+    auto r2 = AllPairsLCS_b(S2);  //base AllPairsLCS
+    std::cout << ' ' << std::get<2>(r2) << std::endl;
+    std::cout << '3';
+    auto r3 = AllPairsLCS_b(S3);  //base AllPairsLCS
+    std::cout << ' ' << std::get<2>(r3) << std::endl;
+    std::cout << '4';
+    auto r4 = AllPairsLCS_b(S4);  //base AllPairsLCS
+    std::cout << ' ' << std::get<2>(r4) << std::endl;
+    std::cout << '5';
+    auto r5 = AllPairsLCS_b(S5);  //base AllPairsLCS
+    std::cout << ' ' << std::get<2>(r5) << std::endl;
+    std::cout << '6';
+    auto r6 = AllPairsLCS_b(S6);  //base AllPairsLCS
+    std::cout << ' ' << std::get<2>(r6) << std::endl;
 }
