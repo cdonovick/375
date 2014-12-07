@@ -14,5 +14,7 @@ LCS_tuple AllPairsLCS_pap(std::vector<std::string> S); //with preallocation and 
 LCS_tuple AllPairsLCS_pas(std::vector<std::string> S); //with preallocation and sorting
 
 size_t LCS(std::string a, std::string b);               //LCS
+size_t LCS(std::string a, std::string b, size_t best)    //LCS with pruning
 size_t LCS_pa(std::string a, std::string b, size_t **d); //LCS with pre-allocated table
+size_t LCS_pa(std::string a, std::string b, size_t best, size_t **d); //LCS with pre-allocated table and pruning
 #endif
