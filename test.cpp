@@ -31,18 +31,18 @@ void test(size_t N, size_t M) {
     auto r1 = AllPairsLCS_b(S1);  //base AllPairsLCS
     std::cout << ' ' << std::get<2>(r1) << std::endl;
     std::cout << '2';
-    auto r2 = AllPairsLCS_b(S2);  //base AllPairsLCS
+    auto r2 = AllPairsLCS_p(S2);  //pruning
     std::cout << ' ' << std::get<2>(r2) << std::endl;
     std::cout << '3';
-    auto r3 = AllPairsLCS_b(S3);  //base AllPairsLCS
+    auto r3 = AllPairsLCS_s(S3);  //sorting
     std::cout << ' ' << std::get<2>(r3) << std::endl;
     std::cout << '4';
-    auto r4 = AllPairsLCS_b(S4);  //base AllPairsLCS
+    auto r4 = AllPairsLCS_pab(S4);  //pa-b
     std::cout << ' ' << std::get<2>(r4) << std::endl;
     std::cout << '5';
-    auto r5 = AllPairsLCS_b(S5);  //base AllPairsLCS
+    auto r5 = AllPairsLCS_pap(S5);  //pa-p
     std::cout << ' ' << std::get<2>(r5) << std::endl;
     std::cout << '6';
-    auto r6 = AllPairsLCS_b(S6);  //base AllPairsLCS
+    auto r6 = AllPairsLCS_pas(S6);  //pa-s
     std::cout << ' ' << std::get<2>(r6) << std::endl;
 }
