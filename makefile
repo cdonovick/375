@@ -1,6 +1,6 @@
-CC=g++
-CFLAGS=-c -std=c++11 -Wall -Wextra -O3
-LDFLAGS=-s
+CC=clang++
+CFLAGS=-c -std=c++11 -Wall -Wextra -ggdb
+LDFLAGS=
 SOURCES=$(wildcard *.cpp)
 OBJECTS=$(patsubst %.cpp, %.o, $(SOURCES))
 EXECUTABLE=submission
