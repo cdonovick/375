@@ -60,6 +60,8 @@ int main(int argc, char **argv) {
 	while(smallIn >> temp){
 		smallVector.push_back(temp);
 	}
+	
+	
 		
 	return 0;
 }
