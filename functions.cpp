@@ -234,7 +234,7 @@ size_t LCS_p(const std::string &a, const std::string &b, const size_t &l) {
 }
 
 //with preallocated table
-size_t LCS_pa(const std::string &a, const std::string &b, std::vector<size_t> D, std::vector<char> P) {
+size_t LCS_pa(const std::string &a, const std::string &b, std::vector<size_t> &D, std::vector<char> &P) {
     std::size_t rows = a.length() + 1;
     std::size_t cols = b.length() + 1;
     
@@ -262,7 +262,7 @@ size_t LCS_pa(const std::string &a, const std::string &b, std::vector<size_t> D,
 }
 
 //with pruning and preallocated table
-size_t LCS_pap(const std::string &a, const std::string &b, const size_t &l, std::vector<size_t> D, std::vector<char> P) {
+size_t LCS_pap(const std::string &a, const std::string &b, const size_t &l, std::vector<size_t> &D, std::vector<char> &P) {
     std::size_t rows = a.length() + 1;
     std::size_t cols = b.length() + 1;
 
