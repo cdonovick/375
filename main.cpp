@@ -51,8 +51,65 @@ double PSP_Med_Time;
 LCS_tuple PSP_Small;
 double PSP_Small_Time;
 
+void printTuple(LCS_tuple data){
+	cout << get<0>(data) << " " << get<1>(data) << " " << get<2>(data) << endl;
+}
+
+void printResults(){
+	cout << "\nResults Format:\t LongestStringA LongestStringB LCS_Length\n\n";
+	
+	cout << "All Pairs LCS Base:\n";
+	cout << "\tLarge Input: ";
+	printTuple(B_Large);
+	cout << "\tMedium Input: ";
+	printTuple(B_Med);
+	cout << "\tSmall Input: ";
+	printTuple(B_Small);
+	
+	cout << "All Pairs LCS w/ Pruning:\n";
+	cout << "\tLarge Input: ";
+	printTuple(P_Large);
+	cout << "\tMedium Input: ";
+	printTuple(P_Med);
+	cout << "\tSmall Input: ";
+	printTuple(P_Small);
+	
+	cout << "All Pairs LCS Base w/ Sorting:\n";
+	cout << "\tLarge Input: ";
+	printTuple(SP_Large);
+	cout << "\tMedium Input: ";
+	printTuple(SP_Med);
+	cout << "\tSmall Input: ";
+	printTuple(SP_Small);
+	
+	cout << "All Pairs LCS Base w/ Preallocation:\n";
+	cout << "\tLarge Input: ";
+	printTuple(PB_Large);
+	cout << "\tMedium Input: ";
+	printTuple(PB_Med);
+	cout << "\tSmall Input: ";
+	printTuple(PB_Small);
+	
+	cout << "All Pairs LCS Base w/ Preallocation and Pruning:\n";
+	cout << "\tLarge Input: ";
+	printTuple(PP_Large);
+	cout << "\tMedium Input: ";
+	printTuple(PP_Med);
+	cout << "\tSmall Input: ";
+	printTuple(PP_Small);
+	
+	cout << "All Pairs LCS Base w/ Preallocation and Sorting:\n";
+	cout << "\tLarge Input: ";
+	printTuple(PSP_Large);
+	cout << "\tMedium Input: ";
+	printTuple(PSP_Med);
+	cout << "\tSmall Input: ";
+	printTuple(PSP_Small);
+	
+}
+
 void printTimes(){
-	cout << "Format:\nFunctionType:\n\tLargeTime\n\tMediumTime\n\tSmallTime\n\n";
+	cout << "\nInput Format:\nFunctionType:\n\tLargeTime\n\tMediumTime\n\tSmallTime\n\n";
 	
 	cout << "All Pairs LCS Base:\n";
 	cout << "\t" << B_Large_Time << endl;
@@ -255,6 +312,7 @@ int main(int argc, char **argv) {
 	PSP_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PSP_Small_Time;
 	
 	printTimes();
+	printResults();
 		
 	return 0;
 }
