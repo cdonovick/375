@@ -6,7 +6,7 @@ LCS_tuple AllPairsLCS_b(std::vector<std::string> S) {
     size_t temp;
     size_t &l = std::get<2>(lcs);
     for (size_t i = 0; i < S.size(); ++i) {
-        for (size_t j = 0; j < S.size(); ++j) {
+        for (size_t j = i+1; j < S.size(); ++j) {
             temp = LCS(S[i], S[j]);
             if (l < temp) {
                 lcs = std::make_tuple(S[i],S[j], temp);
@@ -27,7 +27,7 @@ LCS_tuple AllPairsLCS_p(std::vector<std::string> S) {
             continue;
         }
 
-        for (size_t j = 0; j < S.size(); ++j) {
+        for (size_t j = i+1; j < S.size(); ++j) {
             if (l >= S[j].length()) {
                 continue;
             }
@@ -55,7 +55,7 @@ LCS_tuple AllPairsLCS_s(std::vector<std::string> S) {
             break;
         }
 
-        for (size_t j = 0; j < S.size(); ++j) {
+        for (size_t j = i+1; j < S.size(); ++j) {
             if (l >= S[j].length()) {
                 break;
             }
@@ -84,7 +84,7 @@ LCS_tuple AllPairsLCS_pab(std::vector<std::string> S) {
     std::vector<char> P(maxLength*maxLength);
 
     for (size_t i = 0; i < S.size(); ++i) {
-        for (size_t j = 0; j < S.size(); ++j) {
+        for (size_t j = i+1; j < S.size(); ++j) {
             temp = LCS_pa(S[i], S[j], D, P);
             if (l < temp) {
                 lcs = std::make_tuple(S[i],S[j], temp);
@@ -115,7 +115,7 @@ LCS_tuple AllPairsLCS_pap(std::vector<std::string> S) {
             continue;
         }
 
-        for (size_t j = 0; j < S.size(); ++j) {
+        for (size_t j = i+1; j < S.size(); ++j) {
             if (l >= S[j].length()) {
                 continue;
             }
@@ -151,7 +151,7 @@ LCS_tuple AllPairsLCS_pas(std::vector<std::string> S) {
             break;
         }
 
-        for (size_t j = 0; j < S.size(); ++j) {
+        for (size_t j = i+1; j < S.size(); ++j) {
             if (l >= S[j].length()) {
                 break;
             }

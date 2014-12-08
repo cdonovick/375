@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <chrono>
 #include <cassert>
 
 inline char rand_char(char min, char max, size_t seed = 0);
