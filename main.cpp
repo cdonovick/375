@@ -9,48 +9,80 @@
 using namespace std;
 
 LCS_tuple B_Large;
-int B_Large_Time;
+unsigned long B_Large_Time;
 LCS_tuple B_Med;
-int B_Med_Time;
+unsigned long B_Med_Time;
 LCS_tuple B_Small;
-int B_Small_Time;
+unsigned long B_Small_Time;
 
 LCS_tuple P_Large;
-int P_Large_Time;
+unsigned long P_Large_Time;
 LCS_tuple P_Med;
-int P_Med_Time;
+unsigned long P_Med_Time;
 LCS_tuple P_Small;
-int P_Small_Time;
+unsigned long P_Small_Time;
 
 LCS_tuple SP_Large;
-int SP_Large_Time;
+unsigned long SP_Large_Time;
 LCS_tuple SP_Med;
-int SP_Med_Time;
+unsigned long SP_Med_Time;
 LCS_tuple SP_Small;
-int SP_Small_Time;
+unsigned long SP_Small_Time;
 
 LCS_tuple PB_Large;
-int PB_Large_Time;
+unsigned long PB_Large_Time;
 LCS_tuple PB_Med;
-int PB_Med_Time;
+unsigned long PB_Med_Time;
 LCS_tuple PB_Small;
-int PB_Small_Time;
+unsigned long PB_Small_Time;
 
 LCS_tuple PP_Large;
-int PP_Large_Time;
+unsigned long PP_Large_Time;
 LCS_tuple PP_Med;
-int PP_Med_Time;
+unsigned long PP_Med_Time;
 LCS_tuple PP_Small;
-int PP_Small_Time;
+unsigned long PP_Small_Time;
 
 LCS_tuple PSP_Large;
-int PSP_Large_Time;
+unsigned long PSP_Large_Time;
 LCS_tuple PSP_Med;
-int PSP_Med_Time;
+unsigned long PSP_Med_Time;
 LCS_tuple PSP_Small;
-int PSP_Small_Time;
+unsigned long PSP_Small_Time;
 
+void printTimes(){
+	cout << "Format:\nFunctionType:\n\tLargeTime\n\tMediumTime\n\tSmallTime\n\n";
+	
+	cout << "All Pairs LCS Base:\n";
+	cout << "\t" << B_Large_Time << endl;
+	cout << "\t" << B_Med_Time << endl;
+	cout << "\t" << B_Small_Time << endl;
+	
+	cout << "All Pairs LCS w/ Pruning:\n";
+	cout << "\t" << P_Large_Time << endl;
+	cout << "\t" << P_Med_Time << endl;
+	cout << "\t" << P_Small_Time << endl;
+	
+	cout << "All Pairs LCS w/ Sorting:\n";
+	cout << "\t" << SP_Large_Time << endl;
+	cout << "\t" << SP_Med_Time << endl;
+	cout << "\t" << SP_Small_Time << endl;
+	
+	cout << "All Pairs LCS w/ Preallocation:\n";
+	cout << "\t" << PB_Large_Time << endl;
+	cout << "\t" << PB_Med_Time << endl;
+	cout << "\t" << PB_Small_Time << endl;
+	
+	cout << "All Pairs LCS w/ Preallocation and Pruning:\n";
+	cout << "\t" << PP_Large_Time << endl;
+	cout << "\t" << PP_Med_Time << endl;
+	cout << "\t" << PP_Small_Time << endl;
 
+	cout << "All Pairs LCS w/ Preallocation and Sorting:\n";
+	cout << "\t" << PSP_Large_Time << endl;
+	cout << "\t" << PSP_Med_Time << endl;
+	cout << "\t" << PSP_Small_Time << endl;
+}
 
 int main(int argc, char **argv) {
 	if(argc != 4){
@@ -183,6 +215,7 @@ int main(int argc, char **argv) {
 	PSP_Small = AllPairsLCS_pas(S6S);
 	PSP_Small_Time = time(0) - PSP_Small_Time;
 	
+	printTimes();
 		
 	return 0;
 }
