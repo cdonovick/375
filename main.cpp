@@ -5,50 +5,51 @@
 #include <fstream>
 #include <string>
 #include <ctime>
+#include <sys/time.h>
 
 using namespace std;
 
 LCS_tuple B_Large;
-unsigned long B_Large_Time;
+double B_Large_Time;
 LCS_tuple B_Med;
-unsigned long B_Med_Time;
+double B_Med_Time;
 LCS_tuple B_Small;
-unsigned long B_Small_Time;
+double B_Small_Time;
 
 LCS_tuple P_Large;
-unsigned long P_Large_Time;
+double P_Large_Time;
 LCS_tuple P_Med;
-unsigned long P_Med_Time;
+double P_Med_Time;
 LCS_tuple P_Small;
-unsigned long P_Small_Time;
+double P_Small_Time;
 
 LCS_tuple SP_Large;
-unsigned long SP_Large_Time;
+double SP_Large_Time;
 LCS_tuple SP_Med;
-unsigned long SP_Med_Time;
+double SP_Med_Time;
 LCS_tuple SP_Small;
-unsigned long SP_Small_Time;
+double SP_Small_Time;
 
 LCS_tuple PB_Large;
-unsigned long PB_Large_Time;
+double PB_Large_Time;
 LCS_tuple PB_Med;
-unsigned long PB_Med_Time;
+double PB_Med_Time;
 LCS_tuple PB_Small;
-unsigned long PB_Small_Time;
+double PB_Small_Time;
 
 LCS_tuple PP_Large;
-unsigned long PP_Large_Time;
+double PP_Large_Time;
 LCS_tuple PP_Med;
-unsigned long PP_Med_Time;
+double PP_Med_Time;
 LCS_tuple PP_Small;
-unsigned long PP_Small_Time;
+double PP_Small_Time;
 
 LCS_tuple PSP_Large;
-unsigned long PSP_Large_Time;
+double PSP_Large_Time;
 LCS_tuple PSP_Med;
-unsigned long PSP_Med_Time;
+double PSP_Med_Time;
 LCS_tuple PSP_Small;
-unsigned long PSP_Small_Time;
+double PSP_Small_Time;
 
 void printTimes(){
 	cout << "Format:\nFunctionType:\n\tLargeTime\n\tMediumTime\n\tSmallTime\n\n";
@@ -133,87 +134,125 @@ int main(int argc, char **argv) {
 	auto S6M = medVector;
 	auto S6S = smallVector;
 	
-	B_Large_Time = time(0);
+	struct timeval timer;
+	
+	gettimeofday(&timer,NULL);
+	B_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	B_Large = AllPairsLCS_b(S1L);
-	B_Large_Time = time(0) - B_Large_Time;
+	gettimeofday(&timer,NULL);
+	B_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - B_Large_Time;
 	
-	B_Med_Time = time(0);
+	gettimeofday(&timer,NULL);
+	B_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	B_Med = AllPairsLCS_b(S1M);
-	B_Med_Time = time(0) - B_Med_Time;
+	gettimeofday(&timer,NULL);
+	B_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - B_Med_Time;
 
-	B_Small_Time = time(0);
+	gettimeofday(&timer,NULL);
+	B_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	B_Small = AllPairsLCS_b(S1S);
-	B_Small_Time = time(0) - B_Small_Time;	
+	gettimeofday(&timer,NULL);
+	B_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - B_Small_Time;	
 
 	//***********************************************
 
-	P_Large_Time = time(0);
+	gettimeofday(&timer,NULL);
+	P_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	P_Large = AllPairsLCS_p(S2L);
-	P_Large_Time = time(0) - P_Large_Time;
+	gettimeofday(&timer,NULL);
+	P_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - P_Large_Time;
 
-	P_Med_Time = time(0);
+	gettimeofday(&timer,NULL);
+	P_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	P_Med = AllPairsLCS_p(S2M);
-	P_Med_Time = time(0) - P_Med_Time;
+	gettimeofday(&timer,NULL);
+	P_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - P_Med_Time;
 	
-	P_Small_Time = time(0);
+	gettimeofday(&timer,NULL);
+	P_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	P_Small = AllPairsLCS_p(S2S);
-	P_Small_Time = time(0) - P_Small_Time;
+	gettimeofday(&timer,NULL);
+	P_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - P_Small_Time;
 
 	//***********************************************
 
-	SP_Large_Time = time(0);
+	gettimeofday(&timer,NULL);
+	SP_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	SP_Large = AllPairsLCS_s(S3L);
-	SP_Large_Time = time(0) - SP_Large_Time;
+	gettimeofday(&timer,NULL);
+	SP_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - SP_Large_Time;
 
-	SP_Med_Time = time(0);
+	gettimeofday(&timer,NULL);
+	SP_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	SP_Med = AllPairsLCS_s(S3M);
-	SP_Med_Time = time(0) - SP_Med_Time;
+	gettimeofday(&timer,NULL);
+	SP_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - SP_Med_Time;
 
-	SP_Small_Time = time(0);
+	gettimeofday(&timer,NULL);
+	SP_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	SP_Small = AllPairsLCS_s(S3S);
-	SP_Small_Time = time(0) - SP_Small_Time;	
+	gettimeofday(&timer,NULL);
+	SP_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - SP_Small_Time;	
 
 	//***********************************************
 
-	PB_Large_Time = time(0);
+	gettimeofday(&timer,NULL);
+	PB_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	PB_Large = AllPairsLCS_pab(S4L);
-	PB_Large_Time = time(0) - PB_Large_Time;
+	gettimeofday(&timer,NULL);
+	PB_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PB_Large_Time;
 
-	PB_Med_Time = time(0);
+	gettimeofday(&timer,NULL);
+	PB_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	PB_Med = AllPairsLCS_pab(S4M);
-	PB_Med_Time = time(0) - PB_Med_Time;
+	gettimeofday(&timer,NULL);
+	PB_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PB_Med_Time;
 	
-	PB_Small_Time = time(0);
+	gettimeofday(&timer,NULL);
+	PB_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	PB_Small = AllPairsLCS_pab(S4S);
-	PB_Small_Time = time(0) - PB_Small_Time;
+	gettimeofday(&timer,NULL);
+	PB_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PB_Small_Time;
 
 	//***********************************************
 	
-	PP_Large_Time = time(0);
+	gettimeofday(&timer,NULL);
+	PP_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	PP_Large = AllPairsLCS_pap(S5L);
-	PP_Large_Time = time(0) - PP_Large_Time;
+	gettimeofday(&timer,NULL);
+	PP_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PP_Large_Time;
 
-	PP_Med_Time = time(0);
+	gettimeofday(&timer,NULL);
+	PP_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	PP_Med = AllPairsLCS_pap(S5M);
-	PP_Med_Time = time(0) - PP_Med_Time;
+	gettimeofday(&timer,NULL);
+	PP_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PP_Med_Time;
 
-	PP_Small_Time = time(0);
+	gettimeofday(&timer,NULL);
+	PP_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	PP_Small = AllPairsLCS_pap(S5S);
-	PP_Small_Time = time(0) - PP_Small_Time;
+	gettimeofday(&timer,NULL);
+	PP_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PP_Small_Time;
 	
 	//***********************************************
 
-	PSP_Large_Time = time(0);	
+	gettimeofday(&timer,NULL);
+	PSP_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0);	
 	PSP_Large = AllPairsLCS_pas(S6L);
-	PSP_Large_Time = time(0) - PSP_Large_Time;
+	gettimeofday(&timer,NULL);
+	PSP_Large_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PSP_Large_Time;
 
-	PSP_Med_Time = time(0);
+	gettimeofday(&timer,NULL);
+	PSP_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	PSP_Med = AllPairsLCS_pas(S6M);
-	PSP_Med_Time = time(0) - PSP_Med_Time;
+	gettimeofday(&timer,NULL);
+	PSP_Med_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PSP_Med_Time;
 
-	PSP_Small_Time = time(0);
+	gettimeofday(&timer,NULL);
+	PSP_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0);
 	PSP_Small = AllPairsLCS_pas(S6S);
-	PSP_Small_Time = time(0) - PSP_Small_Time;
+	gettimeofday(&timer,NULL);
+	PSP_Small_Time = timer.tv_sec+(timer.tv_usec/1000000.0) - PSP_Small_Time;
 	
 	printTimes();
 		
