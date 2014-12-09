@@ -112,34 +112,34 @@ void printTimes(){
 	cout << "\nInput Format:\nFunctionType:\n\tLargeTime\n\tMediumTime\n\tSmallTime\n\n";
 	
 	cout << "All Pairs LCS Base:\n";
-	cout << "\t" << B_Large_Time << endl;
-	cout << "\t" << B_Med_Time << endl;
-	cout << "\t" << B_Small_Time << endl;
+	cout << "\t" << B_Large_Time << " seconds" << endl;
+	cout << "\t" << B_Med_Time  << " seconds" << endl;
+	cout << "\t" << B_Small_Time  << " seconds" << endl;
 	
 	cout << "All Pairs LCS w/ Pruning:\n";
-	cout << "\t" << P_Large_Time << endl;
-	cout << "\t" << P_Med_Time << endl;
-	cout << "\t" << P_Small_Time << endl;
+	cout << "\t" << P_Large_Time << " seconds" << endl;
+	cout << "\t" << P_Med_Time << " seconds" << endl;
+	cout << "\t" << P_Small_Time << " seconds" << endl;
 	
 	cout << "All Pairs LCS w/ Sorting:\n";
-	cout << "\t" << SP_Large_Time << endl;
-	cout << "\t" << SP_Med_Time << endl;
-	cout << "\t" << SP_Small_Time << endl;
+	cout << "\t" << SP_Large_Time <<  " seconds" << endl;
+	cout << "\t" << SP_Med_Time <<  " seconds" <<endl;
+	cout << "\t" << SP_Small_Time <<  " seconds" <<endl;
 	
 	cout << "All Pairs LCS w/ Preallocation:\n";
-	cout << "\t" << PB_Large_Time << endl;
-	cout << "\t" << PB_Med_Time << endl;
-	cout << "\t" << PB_Small_Time << endl;
+	cout << "\t" << PB_Large_Time <<  " seconds" <<endl;
+	cout << "\t" << PB_Med_Time <<  " seconds" <<endl;
+	cout << "\t" << PB_Small_Time <<  " seconds" <<endl;
 	
 	cout << "All Pairs LCS w/ Preallocation and Pruning:\n";
-	cout << "\t" << PP_Large_Time << endl;
-	cout << "\t" << PP_Med_Time << endl;
-	cout << "\t" << PP_Small_Time << endl;
+	cout << "\t" << PP_Large_Time <<  " seconds" <<endl;
+	cout << "\t" << PP_Med_Time <<  " seconds" <<endl;
+	cout << "\t" << PP_Small_Time <<  " seconds" <<endl;
 
 	cout << "All Pairs LCS w/ Preallocation and Sorting:\n";
-	cout << "\t" << PSP_Large_Time << endl;
-	cout << "\t" << PSP_Med_Time << endl;
-	cout << "\t" << PSP_Small_Time << endl;
+	cout << "\t" << PSP_Large_Time <<  " seconds" <<endl;
+	cout << "\t" << PSP_Med_Time <<  " seconds" <<endl;
+	cout << "\t" << PSP_Small_Time <<  " seconds" <<endl;
 }
 
 int main(int argc, char **argv) {
