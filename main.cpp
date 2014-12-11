@@ -109,7 +109,7 @@ void printResults(){
 }
 
 void printTimes(){
-	cout << "\nInput Format:\nFunctionType:\n\tLargeTime\n\tMediumTime\n\tSmallTime\n\n";
+	cout << "\nInput Format:\nFunctionType:\n\tSmallTime\n\tMediumTime\n\tLargeTime\n\n";
 	
 	cout << "All Pairs LCS Base:\n";
 	cout << "\t" << B_Large_Time << " seconds" << endl;

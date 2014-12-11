@@ -1,34 +1,34 @@
 
 Input Format:
 FunctionType:
-	LargeTime
-	MediumTime
 	SmallTime
+	MediumTime
+	LargeTime
 
 All Pairs LCS Base:
-	0.00482321 seconds
-	0.197557 seconds
-	18.9861 seconds
+	0.00778389 seconds
+	0.611901 seconds
+	28.7687 seconds
 All Pairs LCS w/ Pruning:
-	0.00169206 seconds
-	0.116652 seconds
-	8.29961 seconds
+	0.00238299 seconds
+	0.16875 seconds
+	12.0854 seconds
 All Pairs LCS w/ Sorting:
-	0.00157809 seconds
-	0.109271 seconds
-	7.84859 seconds
+	0.00229287 seconds
+	0.165251 seconds
+	12.4229 seconds
 All Pairs LCS w/ Preallocation:
-	0.00155187 seconds
-	0.145435 seconds
-	14.4481 seconds
+	0.00212598 seconds
+	0.197887 seconds
+	19.9965 seconds
 All Pairs LCS w/ Preallocation and Pruning:
-	0.00109792 seconds
-	0.0751431 seconds
-	5.40583 seconds
+	0.00149512 seconds
+	0.101965 seconds
+	8.05738 seconds
 All Pairs LCS w/ Preallocation and Sorting:
-	0.00118399 seconds
-	0.0798652 seconds
-	5.46438 seconds
+	0.00166392 seconds
+	0.110021 seconds
+	7.50637 seconds
 
 Results Format:	 LongestStringA LongestStringB LCS_Length
 
