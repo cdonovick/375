@@ -1,0 +1,58 @@
+
+Input Format:
+FunctionType:
+	LargeTime
+	MediumTime
+	SmallTime
+
+All Pairs LCS Base:
+	0.00482321 seconds
+	0.197557 seconds
+	18.9861 seconds
+All Pairs LCS w/ Pruning:
+	0.00169206 seconds
+	0.116652 seconds
+	8.29961 seconds
+All Pairs LCS w/ Sorting:
+	0.00157809 seconds
+	0.109271 seconds
+	7.84859 seconds
+All Pairs LCS w/ Preallocation:
+	0.00155187 seconds
+	0.145435 seconds
+	14.4481 seconds
+All Pairs LCS w/ Preallocation and Pruning:
+	0.00109792 seconds
+	0.0751431 seconds
+	5.40583 seconds
+All Pairs LCS w/ Preallocation and Sorting:
+	0.00118399 seconds
+	0.0798652 seconds
+	5.46438 seconds
+
+Results Format:	 LongestStringA LongestStringB LCS_Length
+
+All Pairs LCS Base:
+	Large Input: wTutCqpEAIUBv QaWFtiwTgjCIBB 5
+	Medium Input: Cc7nivESxbWaL dvCukcSBb6Wpa 6
+	Small Input: VzTGdLnHwSYu zuLAnHwOigSYM 7
+All Pairs LCS w/ Pruning:
+	Large Input: wTutCqpEAIUBv QaWFtiwTgjCIBB 5
+	Medium Input: Cc7nivESxbWaL dvCukcSBb6Wpa 6
+	Small Input: VzTGdLnHwSYu zuLAnHwOigSYM 7
+All Pairs LCS Base w/ Sorting:
+	Large Input: XayfhuMc6yu27l 3ah347uyYprl 5
+	Medium Input: vwRA8UJp9He9jy LRtmA88HleV8y 6
+	Small Input: FxgoUByU6kOKO8 gFXxLzgBfyU6 7
+All Pairs LCS Base w/ Preallocation:
+	Large Input: wTutCqpEAIUBv QaWFtiwTgjCIBB 5
+	Medium Input: Cc7nivESxbWaL dvCukcSBb6Wpa 6
+	Small Input: VzTGdLnHwSYu zuLAnHwOigSYM 7
+All Pairs LCS Base w/ Preallocation and Pruning:
+	Large Input: wTutCqpEAIUBv QaWFtiwTgjCIBB 5
+	Medium Input: Cc7nivESxbWaL dvCukcSBb6Wpa 6
+	Small Input: VzTGdLnHwSYu zuLAnHwOigSYM 7
+All Pairs LCS Base w/ Preallocation and Sorting:
+	Large Input: XayfhuMc6yu27l 3ah347uyYprl 5
+	Medium Input: vwRA8UJp9He9jy LRtmA88HleV8y 6
+	Small Input: FxgoUByU6kOKO8 gFXxLzgBfyU6 7
